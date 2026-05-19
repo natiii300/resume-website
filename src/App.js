@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { ReactTyped } from "react-typed"; // Fixed import for v2+
 import "./App.css";
-/* ------------------------------------------------------------------ */
-/*  PROJECT DATA – matches public/images/ filenames                   */
-/* ------------------------------------------------------------------ */
+
 
 const WORKED_ON_PROJECTS = [
   {
@@ -129,29 +126,6 @@ const SKILLS = [
   "html,css",
 ];
 
-/* ------------------------------------------------------------------ */
-/*  TYPED HEADLINE (Fixed for react-typed v2+)                         */
-/* ------------------------------------------------------------------ */
-const TypedHeadline = () => (
-  <ReactTyped
-    strings={[
-      "Full-Stack Engineer",
-      "Problem Solver",
-      "Crypto & FinTech Builder",
-      "Open-Source Contributor",
-    ]}
-    typeSpeed={50}
-    backSpeed={30}
-    backDelay={1500}
-    loop
-    smartBackspace
-    className="typed-headline"
-  />
-);
-
-/* ------------------------------------------------------------------ */
-/*  MAIN APP COMPONENT                                                */
-/* ------------------------------------------------------------------ */
 function App() {
   const [popupImg, setPopupImg] = useState(null);
   const openPopup = (src) => setPopupImg(src);
