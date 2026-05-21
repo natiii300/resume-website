@@ -237,7 +237,7 @@ function App() {
       <span>React</span>
       <span>Laravel</span>
       <span>PHP</span>
-      <span>Node.js</span>
+      <span>Node.jss</span>
       <span>JWT</span>
       <span>MySQL</span>
     </div>
