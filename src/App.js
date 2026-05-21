@@ -132,7 +132,6 @@ function App() {
   const closePopup = () => setPopupImg(null);
 
   const renderProject = (p, index, isPersonal = false) => {
-  const isLastFive = isPersonal && index >= PERSONAL_PROJECTS.length - 5;
 
   return (
     <article
@@ -198,88 +197,133 @@ function App() {
       {/* ==================== HERO ==================== */}
       {/* ==================== HERO ==================== */}
 <header className="hero">
-  <div className="avatar animate-fade-up" style={{ animationDelay: "0.1s" }}>
-    NB
-  </div>
+  <div className="avatar">NB</div>
 
-  <h1 className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-    Natnael Birhanu — Web & Software Developer
-  </h1>
+  <div className="hero-content">
+    <span className="hero-tag">
+      Full Stack Developer • IT Operations
+    </span>
 
-  {/* ==== NEW HUMAN INTRO ==== */}
-  <div className="intro-text animate-fade-up" style={{ animationDelay: "0.3s" }}>
-    <p>
-      Hey! I’m a Web & Software Developer who loves turning ideas into working
-      products. For the last **2 years** I’ve been building and shipping
-      features at <strong>CTS</strong> – from secure e-wallet flows to
-      automated exit-exam platforms.
-    </p>
-    
-    <p>
-      I’m always open to new challenges, collaborations, or just a good
-      coffee-chat about tech. Scroll down to see what I’ve built, or hit the
-      contact card on the right!
-    </p>
-  </div>
-  {/* ==== END NEW INTRO ==== */}
+    <h1>Natnael Birhanu</h1>
 
-  <div className="lead-wrapper animate-fade-up" style={{ animationDelay: "0.4s" }}>
-    <p className="lead">
-      Passionate <strong>Web & Software Developer</strong> with{" "}
-      <strong>2 years</strong> of professional experience .
+    <h2>
+      Building secure web applications, dashboards,
+      APIs, and business systems.
+    </h2>
+
+    <p className="hero-description">
+      Web & software developer with 2+ years of professional
+      experience at CTS, working on production platforms,
+      authentication systems, e-wallet integrations,
+      admin dashboards, and scalable backend solutions.
     </p>
 
-    <div className="highlight-pills">
-      <span className="pill">Walia Store</span>
-      <span className="pill">E-Wallets</span>
-      <span className="pill">Exit Exam System</span>
-      <span className="pill">Secure Payments</span>
-      <span className="pill">API Integration</span>
+    <div className="hero-buttons">
+      <a href="#projects" className="btn">
+        View Projects
+      </a>
+
+      <a
+        href="/Natnael-Birhanu-CV.pdf"
+        className="btn secondary-btn"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Download CV
+      </a>
     </div>
 
-    <p className="lead" style={{ marginTop: "12px" }}>
-      Independently built <strong>13+</strong> apps, sites, security and backend mentenance including LMS,
-      crypto dashboards, real-estate platforms, and Stellar-based
-      micro-investment systems.
-    </p>
-
-    <div className="highlight-pills" style={{ marginTop: "8px" }}>
-      <span className="pill">React</span>
-      <span className="pill">Node.js</span>
-      <span className="pill">Laravel</span>
-      <span className="pill">Docker</span>
-      <span className="pill">JWT</span>
+    <div className="tech-stack">
+      <span>React</span>
+      <span>Laravel</span>
+      <span>PHP</span>
+      <span>Node.js</span>
+      <span>JWT</span>
+      <span>MySQL</span>
     </div>
   </div>
 </header>
 
       {/* ==================== PROJECTS ==================== */}
-      <section className="projects-section">
-        <h2>Projects I Worked On</h2>
-        <div className="projects-grid">
-          {WORKED_ON_PROJECTS.map((p, i) => renderProject(p, i))}
-        </div>
+      <section className="experience-section">
+  <h2>Experience</h2>
 
-        <h2>Personal / Built By Me</h2>
-        <div className="projects-grid">
-          {PERSONAL_PROJECTS.map((p, i) => renderProject(p, i, true))}
-        </div>
-      </section>
+  <div className="experience-card">
+    <div className="experience-top">
+      <div>
+        <h3>CTS</h3>
+        <span className="experience-role">
+          Web & Software Developer | IT & Operations Manager
+        </span>
+      </div>
+
+      <span className="experience-date">
+        2024 — Present
+      </span>
+    </div>
+
+    <p>
+      Worked on production web applications,
+      authentication systems, admin dashboards,
+      business platforms, and internal software tools.
+    </p>
+
+    <ul>
+      <li>
+        Built and maintained secure backend systems
+      </li>
+
+      <li>
+        Developed APIs and role-based authentication flows
+      </li>
+
+      <li>
+        Managed databases and technical infrastructure
+      </li>
+
+      <li>
+        Worked on e-wallet integrations and dashboards
+      </li>
+    </ul>
+  </div>
+</section>
 
       {/* ==================== SIDEBAR ==================== */}
-      <aside className="sidebar">
-        <h3>Skills & Tools</h3>
-        <div className="skills">
-          {SKILLS.map((s) => (
-            <span className="badge" key={s}>{s}</span>
-          ))}
-        </div>
-        <div className="contact-card">
-          <h3>Contact Me</h3>
-          <p>Email: <a href="mailto:natnael@example.com">natnael@example.com</a></p>
-          <p>Phone: <a href="tel:+251912345678">+251 912 345 678</a></p>
-        </div>
-      </aside>
+      <article className="project-card" key={p.id}>
+  <img
+    src={p.img}
+    alt={p.title}
+    className="project-img"
+    onClick={() => openPopup(p.img)}
+  />
+
+  <div className="project-content">
+    <h3>{p.title}</h3>
+
+    <p>{p.desc}</p>
+
+    <div className="badges">
+      {p.badges.map((b) => (
+        <span className="badge" key={b}>
+          {b}
+        </span>
+      ))}
+    </div>
+
+    <div className="actions">
+      {p.link !== "#" && (
+        <a
+          className="btn"
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Live Demo
+        </a>
+      )}
+    </div>
+  </div>
+</article>
 
       {/* ==================== FOOTER ==================== */}
       <footer>© 2025 Natnael Birhanu • Built with React </footer>
