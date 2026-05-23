@@ -118,6 +118,9 @@ body {
   border-radius: 20px;
   overflow: hidden;
   transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
@@ -133,6 +136,9 @@ body {
 
 .project-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-card h3 {
@@ -143,6 +149,9 @@ body {
 .project-card p {
   color: #b5c0ce;
   line-height: 1.7;
+}
+.project-card p {
+  flex-grow: 1;
 }
 
 .badges {
@@ -162,7 +171,8 @@ body {
 }
 
 .actions {
-  margin: 0 1.25rem 1.25rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .hero-buttons {
@@ -334,6 +344,9 @@ body {
   padding: 1.5rem;
   position: sticky;
   top: 2rem;
+  height: fit-content;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .sidebar h3 {
