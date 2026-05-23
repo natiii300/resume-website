@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import "./App.css";
 
 const PROJECTS = [
+
+  {
+    id: "cts-platform",
+    title: "Ethiopian Blockchain Week",
+    desc:
+      "event website and internal dashboard and regestration  for the event .",
+    badges: ["MySQL", "html, css", "javascript","php"],
+    link: "https://www.etbw.online/",
+    img: "/images/etbw.png",
+  },
   {
     id: "wallet",
     title: "E-Wallets Platform",
@@ -41,6 +51,15 @@ const PROJECTS = [
     link: "https://luwakarabica.com/",
     img: "/images/5.png",
   },
+{
+    id: "crypto-backend",
+    title: "Coin Management Backend",
+    desc:
+      "Backend API for managing coin data, inserts, updates, and secure JWT authentication with role-based access.",
+    badges: ["PHP", "MySQL", "JWT", "API", "Security"],
+    link: "#",
+    img: "/images/logo512.png",
+  },
 ];
 
 const SKILLS = [
@@ -51,10 +70,12 @@ const SKILLS = [
   "PHP",
   "Laravel",
   "MySQL",
+     "django",
   "JWT",
   "REST APIs",
   "Docker",
   "Git",
+   "kotlin",
 ];
 
 function App() {
