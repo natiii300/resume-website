@@ -326,7 +326,7 @@ function App() {
 </article>
 
       {/* ==================== FOOTER ==================== */}
-      <footer>© 2025 Natnael Birhanu • Built with React </footer>
+      <footer>© 2025 Natnael Birhanu • Built with Reacct </footer>
 
       {/* ==================== POPUP LIGHTBOX ==================== */}
       <div
