@@ -115,6 +115,10 @@ function App() {
           <span>Node.js</span>
           <span>JWT</span>
           <span>MySQL</span>
+          <span>Django</span>
+                <span>swift</span>
+          <span>Python</span>
+
         </div>
       </header>
 
