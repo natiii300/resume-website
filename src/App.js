@@ -90,7 +90,7 @@ function App() {
   </a>
 
   <a
-    href="/Natnael-Birhanu-CV.pdf"
+    href="//Natnael Birhanu Cv Draft 2026.pdf"
     className="btn secondary-btn"
     target="_blank"
     rel="noreferrer"
