@@ -84,20 +84,29 @@ function App() {
           and backend solutions.
         </p>
 
-        <div className="hero-buttons">
-          <a href="#projects" className="btn">
-            View Projects
-          </a>
+       <div className="hero-buttons">
+  <a href="#projects" className="btn">
+    View Projects
+  </a>
 
-          <a
-            href="https://github.com/natiii300"
-            className="btn secondary-btn"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </div>
+  <a
+    href="/Natnael-Birhanu-CV.pdf"
+    className="btn secondary-btn"
+    target="_blank"
+    rel="noreferrer"
+  >
+    Download CV
+  </a>
+
+  <a
+    href="https://github.com/natiii300"
+    className="btn secondary-btn"
+    target="_blank"
+    rel="noreferrer"
+  >
+    GitHub
+  </a>
+</div>
 
         <div className="tech-stack">
           <span>React</span>
