@@ -64,7 +64,6 @@ function App() {
     <div className="container">
 
       <header className="hero">
-        <div className="avatar">NB</div>
 
         <span className="hero-tag">
           Full Stack Developer • IT Operations
